@@ -12,4 +12,6 @@ end
 # Create DB Visualization between Team and Players - 1 TEAM : N PLAYERS ✅
 # Create DB Visualization between Team and Games - 1 GAME : N TEAMS ✅
 
-# Create Migration for Teams Table
+# Create Migration for Teams Table ✅
+
+# Create model file ==> `team.rb`
