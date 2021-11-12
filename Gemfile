@@ -8,3 +8,6 @@ gem 'rake'
 gem 'sqlite3'
 gem 'rubocop'
 gem 'rspec'
+gem "better_errors"
+gem "binding_of_caller"
+gem "pry-byebug"
