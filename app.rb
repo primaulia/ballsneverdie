@@ -29,5 +29,19 @@ set :bind, '0.0.0.0'
 get "/" do
   # DB --> Model
   @teams =Team.all
+  @title = "Homepage"
   erb :home
 end
+
+get '/teams/:id' do # localhost:4567/teams/29 # params ==> get things from the url
+  id = params[:id]
+  @team = Team.find(id)
+  @title = @team.name
+  erb :team
+end
+
+
+# User --> '/' ==> as a user i want to see the detail of a team in the DB at routes '/teams/:id'
+# GET request to '/teams/:id'
+
+# ask your model to find team based on id given in the url
