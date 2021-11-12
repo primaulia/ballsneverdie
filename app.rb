@@ -3,9 +3,15 @@
 # Create DB Visualization between Team and Games - 1 GAME : N TEAMS ✅
 
 # Create Migration for Teams Table ✅
+# Create Migration for Players Table ✅
 
 # Create model file ==> `team.rb` ✅
+# Create model file ==> `player.rb` + establish r/s between the two models
+
+# RAKE CONSOLE
+
 # Seed the teams data from API ✅
+# Seed the players data from API + linking it to the teams data
 
 require_relative "config/application"
 require "sinatra"
