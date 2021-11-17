@@ -6,9 +6,36 @@
     <img src="https://source.unsplash.com/1600x900/?nba,<%= team.name %> logo" class="card-img-top" alt="<%= team.name %> logo">
     <div class="card-body">
       <h5 class="card-title"><%= team.name %></h5>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <button type="button" class="btn btn-primary">
+        <i class="far fa-heart"></i>
+      </button>
     </div>
   </div>
   <% end %>
 </div>
+
+<script>
+  // 1. target whatever we need to target
+  //  - target all of them - querySelectorAll
+  //  - target the heart button
+
+  const buttons = document.querySelectorAll('button');
+
+  // 2. create a function that process the event that we want to respond to
+  //  - listened to a click event
+  //  - when you click it --> the heart button becomes filled (.far --> .fas)
+
+  const fillHeart = (event) => {
+    const clickedBtn = event.currentTarget;
+    const icon = clickedBtn.querySelector('i');
+
+    icon.classList.toggle('far');
+    icon.classList.toggle('fas');
+  };
+
+  // 3. create an event listener to the targeted element
+  buttons.forEach((button) => {
+    button.addEventListener('click', fillHeart);
+  });
+</script>
 
