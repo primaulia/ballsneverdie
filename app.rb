@@ -46,6 +46,11 @@ get '/teams/:id' do # localhost:4567/teams/29 # params ==> get things from the u
   erb :team
 end
 
+get '/games' do
+  @title = "Games List"
+  erb :games
+end
+
 
 # User --> '/' ==> as a user i want to see the detail of a team in the DB at routes '/teams/:id'
 # GET request to '/teams/:id'
